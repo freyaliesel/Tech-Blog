@@ -10,5 +10,23 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.0.24"
-  }
+  },
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node seeds/seed"
+  },
+  "name": "tech-blog",
+  "description": "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freyaliesel/Tech-Blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/freyaliesel/Tech-Blog/issues"
+  },
+  "homepage": "https://github.com/freyaliesel/Tech-Blog#readme"
 }
