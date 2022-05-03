@@ -1,33 +1,31 @@
 // NEEDS TO BE EDITED FOR COMMENT LOGIC
 
-async function newFormHandler(event) {
+async function newCommentHandler(event) {
     event.preventDefault();
-    const dish_name = document.querySelector("#dish_name").value;
-    const description = document.querySelector("#description").value;
-    const guest_name = document.querySelector("#guest_name").value;
-    // The following is a ternary operator. It checks to see if has_nuts is checked. If it is, it will return true, otherwise, it will return false.
-    const has_nuts = document.querySelector("#has_nuts:checked") ? true : false;
-    // Send fetch request to add a new dish
+    const title = document.querySelector("#comment-title").value;
+    const content = document.querySelector("#comment-content").value;
+    // NEEDS LOGIC TO ACQUIRE COMMENTERS ID
+    const user_id = "";
+
     const response = await fetch(`/api/dish`, {
         method: "POST",
         body: JSON.stringify({
-            dish_name,
-            description,
-            guest_name,
-            has_nuts,
+            title,
+            content,
+            user_id,
         }),
         headers: {
             "Content-Type": "application/json",
         },
     });
-    //if the dish is added, the 'all' template will be rerendered
+    //if the comment is added, the page will be reloaded
     if (response.ok) {
-        document.location.replace("/");
+        location.reload();
     } else {
-        alert("Failed to add dish");
+        alert("Failed to add comment");
     }
 }
 
 document
-    .querySelector(".new-dish-form")
-    .addEventListener("submit", newFormHandler);
+    .querySelector(".new-comment-form")
+    .addEventListener("submit", newCommentHandler);
