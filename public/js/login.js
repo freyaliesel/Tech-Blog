@@ -1,6 +1,6 @@
-// log in script - from MVC week lesson 20
-const loginFormHandler = async (event) => {
-    event.preventDefault();
+// log in script - based on MVC week lesson 20
+const handleLogin = async (e) => {
+    e.preventDefault();
 
     const email = document.querySelector("#email-login").value.trim();
     const password = document.querySelector("#password-login").value.trim();
@@ -15,13 +15,13 @@ const loginFormHandler = async (event) => {
         if (response.ok) {
             document.location.replace("/");
         } else {
-            alert("Failed to log in.");
+            alert("Login failed.");
         }
     }
 };
 
-const signupFormHandler = async (event) => {
-    event.preventDefault();
+const handleSignup = async (e) => {
+    e.preventDefault();
 
     const username = document.querySelector("#username-signup").value.trim();
     const email = document.querySelector("#email-signup").value.trim();
@@ -37,15 +37,15 @@ const signupFormHandler = async (event) => {
         if (response.ok) {
             document.location.replace("/");
         } else {
-            alert("Failed to sign up.");
+            alert("Signup failed.");
         }
     }
 };
 
 document
     .querySelector(".login-form")
-    .addEventListener("submit", loginFormHandler);
+    .addEventListener("submit", handleLogin);
 
 document
     .querySelector(".signup-form")
-    .addEventListener("submit", signupFormHandler);
+    .addEventListener("submit", handleSignup);
