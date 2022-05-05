@@ -1,4 +1,22 @@
 {
+  "name": "tech-blog",
+  "description": "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node seeds/index.js"
+  },
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freyaliesel/Tech-Blog.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/freyaliesel/Tech-Blog/issues"
+  },
+  "homepage": "https://github.com/freyaliesel/Tech-Blog#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.3",
@@ -6,28 +24,11 @@
     "express": "^4.18.1",
     "express-handlebars": "^6.0.5",
     "express-session": "^1.17.2",
+    "handlebars": "^4.7.7",
     "mysql2": "^2.3.3",
     "sequelize": "^6.19.0"
   },
   "devDependencies": {
     "tailwindcss": "^3.0.24"
-  },
-  "scripts": {
-    "start": "node server.js",
-    "seed": "node seeds/index.js"
-  },
-  "name": "tech-blog",
-  "description": "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
-  "version": "1.0.0",
-  "main": "server.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/freyaliesel/Tech-Blog.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/freyaliesel/Tech-Blog/issues"
-  },
-  "homepage": "https://github.com/freyaliesel/Tech-Blog#readme"
+  }
 }
